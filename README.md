@@ -5,11 +5,13 @@
 Users of Is It A Sandwich? will be able to contrubute to the conversaton of "what is a sandwich?" on the home page and vote on if they think a hotdog is a sandwich on the vote page. Upon completing the yes/no question, users will be directed to the results page where the aggregate voting results will be displayed. All of these pages will be available in the navagation bar at the top of the web page. 
 
 ## Wireframes
-
+Desktop:
 ![alt text](https://i.imgur.com/3GxMai1.png "Desktop Home Page Wireframe")
 ![alt text](https://i.imgur.com/EimpwDZ.png "Desktop Vote Page Wireframe")
 ![alt text](https://i.imgur.com/HAeBC3s.png "Desktop Is It A Sandwich Page Wireframe")
+Tablet: 
 ![alt text](https://i.imgur.com/BoJFq71.png "Tablet Home Page Wireframe")
+Mobile:
 ![alt text](https://i.imgur.com/Rhgl6An.png "Mobile Home Page and hamburger menu Wireframe")
 
 ## Component Hierarchy
