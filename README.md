@@ -99,6 +99,7 @@ foods data sample:
 #### PostMVP  
 
 - add multiple items to the foods API/voting/results
+- use https://www.npmjs.com/package/react-minimal-pie-chart to implement a pie chart of the data 
 
 ## Project Schedule
 
