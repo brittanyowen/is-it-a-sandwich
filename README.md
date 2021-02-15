@@ -6,7 +6,11 @@ Users of Is It A Sandwich? will be able to contrubute to the conversaton of "wha
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+![alt text](https://i.imgur.com/3GxMai1.png "Desktop Home Page Wireframe")
+![alt text](https://i.imgur.com/EimpwDZ.png "Desktop Vote Page Wireframe")
+![alt text](https://i.imgur.com/HAeBC3s.png "Desktop Is It A Sandwich Page Wireframe")
+![alt text](https://i.imgur.com/BoJFq71.png "Tablet Home Page Wireframe")
+![alt text](https://i.imgur.com/Rhgl6An.png "Mobile Home Page and hamburger menu Wireframe")
 
 ## Component Hierarchy
 ![alt text](https://i.imgur.com/r33Xoej.png "Component Hierarchy")
