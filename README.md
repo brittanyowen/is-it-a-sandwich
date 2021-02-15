@@ -9,7 +9,7 @@ Users of Is It A Sandwich? will be able to contrubute to the conversaton of "wha
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
 ## Component Hierarchy
-[Component Hierarchy](https://imgur.com/r33Xoej)
+![alt text](https://imgur.com/r33Xoej "Component Hierarchy")
 
 ## API and Data Sample
 comments data sample: 
