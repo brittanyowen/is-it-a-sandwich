@@ -21,7 +21,7 @@ Mobile:
 ![alt text](https://i.imgur.com/Rhgl6An.png "Mobile Home Page and hamburger menu Wireframe")
 
 ## Component Hierarchy
-![alt text](https://i.imgur.com/r33Xoej.png "Component Hierarchy")
+![alt text](https://i.imgur.com/TWQLDA4.png "Component Hierarchy")
 
 ## API and Data Sample
 https://airtable.com/tblpXOQwvR8gNjih0/viwh9R7vTTFvLTh7b?blocks=hide
@@ -135,9 +135,14 @@ This schedule will be used to keep track of your progress throughout the week an
 ## SWOT Analysis
 
 ### Strengths:
-
+- Organization and planning with the help of this readme to keep me on task
+- Knowledge and resources through code alongs and homework
 ### Weaknesses:
-
+- CSS and styling individual components
+- Mobile queries using grid 
+- Being able to successfully render componenents to my web page
 ### Opportunities:
-
+- Learning new react plug in with react-minimal-pie-chart and being able to make a more visually appealing web app 
+- Learn how to make and style a hamburger menu on mobile 
 ### Threats:
+- Last project I struggles with getting stuck on small problems and I ended up wasting a lot of time, there is a threat of that happening again with the addition of two API tables and a new react plug in. 
