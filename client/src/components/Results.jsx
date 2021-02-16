@@ -8,7 +8,7 @@ const Results = (props) => {
 
   return (
     <div>
-      <h1>{percentYes}% of voters consider a {food} a sandwich</h1>
+      <h3>{percentYes}% of voters consider a {food} a sandwich</h3>
     </div>
   );
 };

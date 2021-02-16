@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Nav from "./components/Nav";
 import Results from "./components/Results";
+import Vote from "./components/Vote"
 
 function App() {
   const [comments, setComments] = useState([]);
@@ -47,13 +48,17 @@ function App() {
           </div>
         </Route>
         <Route path="/results">
+          <h3>THE PEOPLE HAVE SPOKEN!</h3>
           {foods.map((food) => (
             <Results key={food.id} food={food}/>
           ))}
-          {/* <Results foods={foods}/> */}
         </Route>
-        <Route path="/vote">
-          <h3>Voting goes here</h3>
+        <Route exact path="/vote">
+        {foods.map((food) => (
+          <Vote key={food.id} food={food} setToggleFetch={setToggleFetch}/>
+          ))}
+          {/* <Vote foods={foods}/> */}
+
         </Route>
       </div>
       <Footer />

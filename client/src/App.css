@@ -8,3 +8,7 @@
   max-width: 500px;
   border: solid black 2px;
 }
+
+.content {
+  margin-bottom: 30px;
+}
