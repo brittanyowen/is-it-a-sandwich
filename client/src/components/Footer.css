@@ -1,0 +1,11 @@
+.footer {
+  position: fixed;
+  bottom: 0; 
+  background-color: cadetblue;
+  text-align: center; 
+  width: 100%; 
+}
+
+.footer img {
+  width: 20px; 
+}

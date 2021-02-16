@@ -17,6 +17,9 @@ const Form = (props) => {
     await axios.post(baseURL, { fields }, config);
 
     props.setToggleFetch((curr) => !curr);
+
+    setAuthor("");
+    setComment("");
   };
 
   return (
