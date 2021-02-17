@@ -7,12 +7,9 @@ const Nav = (props) => {
     <div className="nav-bar">
       <Link to="/">Home</Link>
       <Link to="/results">Is It A Sandwich?</Link>
-      {/* <Link to={`/vote/rec7IYq3xD6pnefVO`}>VOTE</Link> */}
-      {/* <Link to={`/vote/${props.foods.id}`}>VOTE</Link> */}
-      {/* <Link to="/vote">VOTE</Link> */}
-      <Link to={`/vote/${props.foods.id}`}>
+      {/* <Link to={`/vote/${props.foods.id}`}>
         VOTE
-      </Link>
+      </Link> */}
     </div>
   );
 };

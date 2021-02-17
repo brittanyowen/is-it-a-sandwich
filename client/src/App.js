@@ -53,15 +53,10 @@ function App() {
             <Results key={food.id} food={food} />
           ))}
         </Route>
-        <Route path={`/vote/:id`}>
-          {/* {foods.map((food) => (
-          <Vote key={food.id} food={food} setToggleFetch={setToggleFetch}/>
-          ))} */}
-          {/* Take links below away, refreshes page when yes/no buttons are clicked */}
-          <Link to={`/vote/${foods.id}`}> 
-          {/* <Link to={`/vote/rec7IYq3xD6pnefVO`}> */}
+          <Route path={`/vote/:id`}>
+          {/* <Link to={`/vote/${foods.id}`}>  */}
             <Vote foods={foods} setToggleFetch={setToggleFetch}/>
-          </Link>
+          {/* </Link> */}
         </Route>
       </div>
       <Footer />
