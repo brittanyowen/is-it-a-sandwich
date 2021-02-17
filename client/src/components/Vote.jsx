@@ -1,62 +1,59 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import { baseURL2, config } from "../services";
 import "./Vote.css";
 
 const Vote = (props) => {
+  const [food, setFood] = useState("");
+  const [yesVotes, setYesVotes] = useState("");
+  const [noVotes, setNoVotes] = useState("");
+  const history = useHistory();
   const params = useParams();
-  const hotdog = props.foods[0] ? props.foods[0].id : null;
+  const question = props.foods.find((q) => params.id === q.id);
 
-  const [yesVotes, setYesVotes] = useState(0);
-  const [noVotes, setNoVotes] = useState(0);
-  // console.log(props.foods[0] ? props.foods[0].fields ? props.foods[0].fields.yesVotes : null : null)
-
-
-  const yesVote = () => {
-    console.log(yesVotes);
-    setYesVotes(yesVotes + 1)
+  useEffect(() => {
+    if (params.id) {
+      console.log(question);
+      if (question) {
+        setFood(question.fields.food);
+        setYesVotes(question.fields.yesVotes);
+        setNoVotes(question.fields.noVotes);
+      }
     }
+  }, [props.foods, params.id]);
 
-  const noVote = () => {
-    console.log(noVotes);
-    setNoVotes(noVotes + 1)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const fields = {
+      food: food,
+      yesVotes: yesVotes,
+      noVotes: noVotes,
+    };
+
+    if (params.id) {
+      const questionURL = `${baseURL2}/${params.id}`;
+      await axios.put(questionURL, { fields }, config);
+    } else {
+      await axios.post(baseURL2, { fields }, config);
+    }
+    props.setToggleFetch((curr) => !curr);
+    history.push("/results");
   };
 
   return (
-    <div className="ballot-container">
-      <img
-        src={
-          props.foods[0]
-            ? props.foods[0].fields
-              ? props.foods[0].fields.image
-              : null
-            : null
-        }
-        alt={
-          props.foods[0]
-            ? props.foods[0].fields
-              ? props.foods[0].fields.food
-              : null
-            : null
-        }
-      />
-      <div>
-        Is a{" "}
-        {props.foods[0]
-          ? props.foods[0].fields
-            ? props.foods[0].fields.food
-            : null
-          : null}{" "}
-        a sandwich?
-      </div>
-      <form>
-        <button onClick={yesVote}>YES</button>
-        <button onClick={noVote}>NO</button>
-
-
+    <div className="ballot-container"> 
+      {/* <img src={question.fields.image} alt={question.fields.food} /> */}
+      <div>Is a {question.fields.food} a sandwich?</div>
+      <form onClick={handleSubmit}>
+        <button value={yesVotes} onClick={(e) => setYesVotes(e.target.value)}>
+          YES
+        </button>
+        <button value={noVotes} onClick={(e) => setNoVotes(e.target.value)}>
+          NO
+        </button>
       </form>
     </div>
   );
