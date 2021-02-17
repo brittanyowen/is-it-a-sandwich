@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -6,31 +7,57 @@ import { baseURL2, config } from "../services";
 import "./Vote.css";
 
 const Vote = (props) => {
-  const { food, yesVotes, noVotes, image } = props.food.fields;
-  const [yeses, setYeses] = useState('');
-  const [nos, setNos] = useState('');
-  // const params = useParams(); 
+  const params = useParams();
+  const hotdog = props.foods[0] ? props.foods[0].id : null;
 
-  // console.log(params)
+  const [yesVotes, setYesVotes] = useState(0);
+  const [noVotes, setNoVotes] = useState(0);
+  // console.log(props.foods[0] ? props.foods[0].fields ? props.foods[0].fields.yesVotes : null : null)
+
 
   const yesVote = () => {
-    console.log("yesVote + 1");
-    console.log(props.food.id)
-  };
+    console.log(yesVotes);
+    setYesVotes(yesVotes + 1)
+    }
 
   const noVote = () => {
-    console.log("noVote + 1");
+    console.log(noVotes);
+    setNoVotes(noVotes + 1)
   };
 
   return (
     <div className="ballot-container">
       <img
-        src={image}
-        alt={food}
+        src={
+          props.foods[0]
+            ? props.foods[0].fields
+              ? props.foods[0].fields.image
+              : null
+            : null
+        }
+        alt={
+          props.foods[0]
+            ? props.foods[0].fields
+              ? props.foods[0].fields.food
+              : null
+            : null
+        }
       />
-      <div>Is a {food} a sandwich?</div>
-      <button onClick={yesVote}>YES</button>
-      <button onClick={noVote}>NO</button>
+      <div>
+        Is a{" "}
+        {props.foods[0]
+          ? props.foods[0].fields
+            ? props.foods[0].fields.food
+            : null
+          : null}{" "}
+        a sandwich?
+      </div>
+      <form>
+        <button onClick={yesVote}>YES</button>
+        <button onClick={noVote}>NO</button>
+
+
+      </form>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { baseURL, baseURL2, config } from "./services";
 import axios from "axios";
@@ -8,11 +8,11 @@ import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Nav from "./components/Nav";
 import Results from "./components/Results";
-import Vote from "./components/Vote"
+import Vote from "./components/Vote";
 
 function App() {
   const [comments, setComments] = useState([]);
-  const [foods, setFoods] = useState([]); 
+  const [foods, setFoods] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect(() => {
@@ -22,17 +22,17 @@ function App() {
     };
 
     const showResults = async () => {
-      const resp2 = await axios.get(baseURL2, config); 
-      setFoods(resp2.data.records)
-    }
+      const resp2 = await axios.get(baseURL2, config);
+      setFoods(resp2.data.records);
+    };
     getComments();
-    showResults(); 
+    showResults();
   }, [toggleFetch]);
 
   return (
     <div className="App">
       <div className="content">
-        <Nav />
+        <Nav foods={foods} />
         <Route exact path="/">
           <div>
             <img
@@ -50,15 +50,18 @@ function App() {
         <Route path="/results">
           <h3>THE PEOPLE HAVE SPOKEN!</h3>
           {foods.map((food) => (
-            <Results key={food.id} food={food}/>
+            <Results key={food.id} food={food} />
           ))}
         </Route>
-        <Route exact path="/vote">
-        {foods.map((food) => (
+        <Route path={`/vote/:id`}>
+          {/* {foods.map((food) => (
           <Vote key={food.id} food={food} setToggleFetch={setToggleFetch}/>
-          ))}
-          {/* <Vote foods={foods}/> */}
-
+          ))} */}
+          {/* Take links below away, refreshes page when yes/no buttons are clicked */}
+          {/* <Link to={`/vote/${foods.id}`}>  */}
+          <Link to={`/vote/rec7IYq3xD6pnefVO`}>
+            <Vote foods={foods} />
+          </Link>
         </Route>
       </div>
       <Footer />
