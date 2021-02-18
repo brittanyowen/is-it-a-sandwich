@@ -31,20 +31,23 @@ function App() {
 
   return (
     <div className="App">
-      <div className="content">
+      <div>
         <Nav foods={foods} />
         <Route exact path="/">
-          <div>
+          <div className="content">
             <img
               className="definition"
               src="https://imgur.com/XTC1a81.png"
               alt="definition of a sandwich"
             />
             <h2>VOTE button will go here</h2>
-            <Form comments={comments} setToggleFetch={setToggleFetch} />
-            {comments.map((comment) => (
-              <Comments key={comment.id} comment={comment} />
-            ))}
+            <div className="comment-section">
+              <h4>Join the conversation!</h4>
+              <Form comments={comments} setToggleFetch={setToggleFetch} />
+              {comments.map((comment) => (
+                <Comments key={comment.id} comment={comment} />
+              ))}
+            </div>
           </div>
         </Route>
         <Route path="/results">
@@ -53,9 +56,9 @@ function App() {
             <Results key={food.id} food={food} />
           ))}
         </Route>
-          <Route path={`/vote/:id`}>
+        <Route path={`/vote/:id`}>
           {/* <Link to={`/vote/${foods.id}`}>  */}
-            <Vote foods={foods} setToggleFetch={setToggleFetch}/>
+          <Vote foods={foods} setToggleFetch={setToggleFetch} />
           {/* </Link> */}
         </Route>
       </div>

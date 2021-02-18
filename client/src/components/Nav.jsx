@@ -5,11 +5,11 @@ import "./Nav.css";
 const Nav = (props) => {
   return (
     <div className="nav-bar">
-      <Link to="/">Home</Link>
-      <Link to="/results">Is It A Sandwich?</Link>
-      {/* <Link to={`/vote/${props.foods.id}`}>
+      <Link className="home-link" to="/">Home</Link>
+      <Link className="sandwich-link" to="/results">Is It A Sandwich?</Link>
+      <Link className="vote-link" to={`/vote/${props.foods.id}`}>
         VOTE
-      </Link> */}
+      </Link>
     </div>
   );
 };

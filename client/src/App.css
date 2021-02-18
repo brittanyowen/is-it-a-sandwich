@@ -7,8 +7,16 @@
 .definition {
   max-width: 500px;
   border: solid black 2px;
+
 }
 
 .content {
-  margin-bottom: 30px;
+  margin: 30px auto;
+}
+
+.comment-section{
+  display: flex;
+  flex-direction: column; 
+  max-width: 500px; 
+  margin: 0 auto; 
 }

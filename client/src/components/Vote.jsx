@@ -16,11 +16,15 @@ const Vote = (props) => {
 
   useEffect(() => {
     if (params.id) {
-      if (question) {
+      if (params.id === "undefined") {
+        history.push('/')
+      } else if (question) {
         setFood(question.fields.food);
         setYesVotes(question.fields.yesVotes);
         setNoVotes(question.fields.noVotes);
       }
+    } else {
+      history.push('/')
     }
   }, [props.foods, params.id]);
 
@@ -52,10 +56,12 @@ const Vote = (props) => {
     props.setToggleFetch((curr) => !curr);
     history.push("/results");
   };
-
+  if (!question) {
+    return <h4>Loading...</h4>
+  }
   return (
     <div className="ballot-container">
-      {/* <img src={question.fields.image} alt={question.fields.food} /> */}
+      <img src={question.fields.image} alt={question.fields.food} />
       <div>Is a {question.fields.food} a {question.fields.food === "poptart" ? "ravioli" : "sandwich"}?</div>
       <form onSubmit={handleSubmit}>
         <button onClick={addYes}>Yes</button>

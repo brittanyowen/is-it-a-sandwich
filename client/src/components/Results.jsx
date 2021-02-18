@@ -16,5 +16,4 @@ const Results = (props) => {
     </div>
   );
 };
-
 export default Results;

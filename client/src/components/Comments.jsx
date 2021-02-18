@@ -6,7 +6,7 @@ const Comments = (props) => {
   const { author, comment } = props.comment.fields;
 
   return (
-    <div className="comment-section">
+    <div className="comment">
       <h3>{author}</h3>
       <h4>{comment}</h4>
     </div>

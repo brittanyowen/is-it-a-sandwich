@@ -1,3 +1,18 @@
-.comment-section {
-  border: solid blue 2px; 
+.comment {
+  text-align: left;
+  border: solid black 1px; 
+  margin-top: 10px;
+}
+
+.comment h3 {
+  font-weight: normal;
+  background-color: lightblue;
+  border-bottom: solid black 1px; 
+  padding: 5px; 
+  margin: 0; 
+}
+
+.comment h4 {
+  font-weight: lighter;
+  padding-left: 10px; 
 }
