@@ -15,8 +15,9 @@ a {
 }
 
 a:hover {
-  color: black;
+  color: rgb(59, 59, 136);
   text-decoration: underline; 
+  font-weight: bold; 
 }
 
 .home-link {

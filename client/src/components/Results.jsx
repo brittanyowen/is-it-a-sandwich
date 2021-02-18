@@ -11,9 +11,9 @@ const Results = (props) => {
   return (
     <div>
       <h3 className="percentage-header">{percentYes}% of voters consider a {food} a {food === "poptart" ? "ravioli": "sandwich"}</h3>
-      <Link to={`/vote/${props.food.id}`}>
+      {/* <Link to={`/vote/${props.food.id}`}>
         <button>VOTE</button>
-      </Link>
+      </Link> */}
     </div>
   );
 };

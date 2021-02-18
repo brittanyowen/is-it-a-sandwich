@@ -7,35 +7,35 @@ import "./Vote.css";
 
 const Vote = (props) => {
   const [food, setFood] = useState("");
-  const [yesVotes, setYesVotes] = useState('');
-  const [noVotes, setNoVotes] = useState('');
+  const [yesVotes, setYesVotes] = useState("");
+  const [noVotes, setNoVotes] = useState("");
   const history = useHistory();
   const params = useParams();
 
-  const question = props.foods.find((q) => params.id === q.id);
+  const question = props.foods.find((q, i) => params.id === q.id);
 
   useEffect(() => {
     if (params.id) {
       if (params.id === "undefined") {
-        history.push('/')
+        history.push("/");
       } else if (question) {
         setFood(question.fields.food);
         setYesVotes(question.fields.yesVotes);
         setNoVotes(question.fields.noVotes);
       }
     } else {
-      history.push('/')
+      history.push("/");
     }
   }, [props.foods, params.id]);
 
   const addYes = () => {
-    const yes = parseInt(`${yesVotes}`) + 1; 
-    setYesVotes(`${yes}`)
+    const yes = parseInt(`${yesVotes}`) + 1;
+    setYesVotes(`${yes}`);
   };
 
   const addNo = () => {
-    const no = parseInt(`${noVotes}`) + 1
-    setNoVotes(`${no}`)
+    const no = parseInt(`${noVotes}`) + 1;
+    setNoVotes(`${no}`);
   };
 
   const handleSubmit = async (e) => {
@@ -56,17 +56,24 @@ const Vote = (props) => {
     props.setToggleFetch((curr) => !curr);
     history.push("/results");
   };
+
   if (!question) {
-    return <h4>Loading...</h4>
+    return <h4>Loading...</h4>;
   }
+
   return (
     <div className="ballot-container">
-      <img src={question.fields.image} alt={question.fields.food} />
-      <div className="question">Is a {question.fields.food} a {question.fields.food === "poptart" ? "ravioli" : "sandwich"}?</div>
-      <form onSubmit={handleSubmit}>
-        <button onClick={addYes}>YES</button>
-        <button onClick={addNo}>NO</button>
-      </form>
+      <div>
+        <img src={question.fields.image} alt={question.fields.food} />
+        <div className="question">
+          Is a {question.fields.food} a{" "}
+          {question.fields.food === "poptart" ? "ravioli" : "sandwich"}?
+        </div>
+        <form onSubmit={handleSubmit}>
+          <button onClick={addYes}>YES</button>
+          <button onClick={addNo}>NO</button>
+        </form>
+      </div>
     </div>
   );
 };

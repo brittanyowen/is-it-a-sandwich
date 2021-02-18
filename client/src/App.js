@@ -1,6 +1,7 @@
 import { Link, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { baseURL, baseURL2, config } from "./services";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./App.css";
 import Comments from "./components/Comments";
@@ -14,6 +15,7 @@ function App() {
   const [comments, setComments] = useState([]);
   const [foods, setFoods] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
     const getComments = async () => {
@@ -56,10 +58,19 @@ function App() {
             <Results key={food.id} food={food} />
           ))}
         </Route>
+        <Route exact path={`/vote`}>
+          <h3>Vote Here!</h3>
+          {foods.map((food, index) => (
+            <div>
+                Question: {index} - {food.fields.food}
+              <Link to={`/vote/${food.id}`}>
+                <button>VOTE</button>
+              </Link>
+            </div>
+          ))}
+        </Route>
         <Route path={`/vote/:id`}>
-          {/* <Link to={`/vote/${foods.id}`}>  */}
           <Vote foods={foods} setToggleFetch={setToggleFetch} />
-          {/* </Link> */}
         </Route>
       </div>
       <Footer />
