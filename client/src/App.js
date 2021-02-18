@@ -51,7 +51,7 @@ function App() {
           </div>
         </Route>
         <Route path="/results">
-          <h3>THE PEOPLE HAVE SPOKEN!</h3>
+          <h3 className="results-header">THE PEOPLE HAVE SPOKEN!</h3>
           {foods.map((food) => (
             <Results key={food.id} food={food} />
           ))}

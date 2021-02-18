@@ -24,7 +24,7 @@ const Form = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="comment-form" onSubmit={handleSubmit}>
       <label className="author-label" htmlFor="author">Author: </label>
       <input value={author} onChange={(e) => setAuthor(e.target.value)}></input>
       <br></br>
