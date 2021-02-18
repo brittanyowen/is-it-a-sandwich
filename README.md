@@ -105,9 +105,9 @@ This schedule will be used to keep track of your progress throughout the week an
 
 |  Day | Deliverable | Status
 |---|---|---|
-|Feb 16| Project Pitch & Approval, React app & basic framework & Nav component set up | Incomplete
-|Feb 17| Render comments API on home page & fully functioning comment form with submit button | Incomplete
-|Feb 18| Render foods API on results page, voting page to modify yes/no of food | Incomplete
+|Feb 16| Project Pitch & Approval, React app & basic framework & Nav component set up | Complete
+|Feb 17| Render comments API on home page & fully functioning comment form with submit button | Complete
+|Feb 18| Render foods API on results page, voting page to modify yes/no of food | Complete
 |Feb 19| Deployed MVP due, media queries | Incomplete
 |Feb 20| Post MVPs, adding other foods to API/voting page/results page | Incomplete
 |Feb 21-22 | CSS Styling - grid/flexbox/animations | Incomplete
@@ -117,18 +117,18 @@ This schedule will be used to keep track of your progress throughout the week an
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| React App Setup & basic framework | H | 3hrs| 0hrs | 0hrs |
-| Create components folder, create Nav component with links to "Home", "Vote", and "Is It A Sandwich?" | H | 3hrs| 0hrs | 0hrs |
-| Create Comments component, make axios GET call to comments API | H | 3hrs| 0hrs | 0hrs |
-| Map through comments array and render on App.js | H | 2hrs| 0hrs | 0hrs |
-| Create Form component & render on App.js above rendered comments using axios GET call | H | 3hrs| 0hrs | 0hrs |
-| Create Foods component, make axios GET call to foods API & render on App.js | H | 3hrs| 0hrs | 0hrs |
-| Edit the yesVotes/noVotes states using axios PUT and POST | H | 6hrs| 0hrs | 0hrs |
+| React App Setup & basic framework | H | 3hrs| 2hrs | 2hrs |
+| Create components folder, create Nav component with links to "Home", "Vote", and "Is It A Sandwich?" | H | 3hrs| 2hrs | 2hrs |
+| Create Comments component, make axios GET call to comments API | H | 3hrs| 2hrs | 2hrs |
+| Map through comments array and render on App.js | H | 2hrs| 1hrs | 1hrs |
+| Create Form component & render on App.js above rendered comments using axios GET call | H | 3hrs| 1hrs | 1hrs |
+| Create Foods and Results component, make axios GET call to foods API & render on App.js | H | 3hrs| 2hrs | 2hrs |
+| Edit the yesVotes/noVotes states using axios PUT and POST | H | 6hrs| 6hrs | 6hrs |
 | Once user clicks either yes or no button, direct page to results page using history.push | H | 2hrs| 0hrs | 0hrs |
 | Media queries for tablet and mobile | H | 3hrs| 0hrs | 0hrs |
 | CSS Styling using grid and flexbox | H | 3hrs| 0hrs | 0hrs |
 | Adding multiple food items to Foods and Results components | H | 6hrs| 0hrs | 0hrs |
-| Total | H | 37hrs| 0hrs | 0hrs |
+| Total | H | 37hrs| 16hrs | 16hrs |
 
 ## SWOT Analysis
 
