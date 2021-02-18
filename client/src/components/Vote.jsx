@@ -56,7 +56,7 @@ const Vote = (props) => {
   return (
     <div className="ballot-container">
       {/* <img src={question.fields.image} alt={question.fields.food} /> */}
-      <div>Is a {question.fields.food} a sandwich?</div>
+      <div>Is a {question.fields.food} a {question.fields.food === "poptart" ? "ravioli" : "sandwich"}?</div>
       <form onSubmit={handleSubmit}>
         <button onClick={addYes}>Yes</button>
         <button onClick={addNo}>No</button>
