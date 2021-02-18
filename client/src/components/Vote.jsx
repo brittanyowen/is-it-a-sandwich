@@ -7,8 +7,8 @@ import "./Vote.css";
 
 const Vote = (props) => {
   const [food, setFood] = useState("");
-  const [yesVotes, setYesVotes] = useState("");
-  const [noVotes, setNoVotes] = useState("");
+  const [yesVotes, setYesVotes] = useState('');
+  const [noVotes, setNoVotes] = useState('');
   const history = useHistory();
   const params = useParams();
 
@@ -24,35 +24,25 @@ const Vote = (props) => {
     }
   }, [props.foods, params.id]);
 
-  
-  const addYesVote = async () => {
-    setYesVotes(yesVotes.value + 1)
-    
-    const fields = {
-      food,
-      yesVotes,
-      noVotes,
-    };
-    
-    if (params.id) {
-      const questionURL = `${baseURL2}/${params.id}`;
-      await axios.put(questionURL, { fields }, config);
-    } else {
-      await axios.post(baseURL2, { fields }, config);
-    }
-    props.setToggleFetch((curr) => !curr);
-    history.push("/results");
+  const addYes = () => {
+    const yes = parseInt(`${yesVotes}`) + 1; 
+    setYesVotes(`${yes}`)
   };
-  
-  const addNoVote = async () => {
-    setNoVotes(noVotes.value + 1)
-    
+
+  const addNo = () => {
+    const no = parseInt(`${noVotes}`) + 1
+    setNoVotes(`${no}`)
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
     const fields = {
       food,
       yesVotes,
       noVotes,
     };
-    
+
     if (params.id) {
       const questionURL = `${baseURL2}/${params.id}`;
       await axios.put(questionURL, { fields }, config);
@@ -67,12 +57,10 @@ const Vote = (props) => {
     <div className="ballot-container">
       {/* <img src={question.fields.image} alt={question.fields.food} /> */}
       <div>Is a {question.fields.food} a sandwich?</div>
-        <button onClick={addYesVote}>
-          YES
-        </button>
-        <button onClick={addNoVote}>
-          NO
-        </button>
+      <form onSubmit={handleSubmit}>
+        <button onClick={addYes}>Yes</button>
+        <button onClick={addNo}>No</button>
+      </form>
     </div>
   );
 };
