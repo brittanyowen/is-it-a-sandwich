@@ -17,6 +17,8 @@ function App() {
   const [toggleFetch, setToggleFetch] = useState(false);
   const history = useHistory();
 
+  const foodsArr = foods;
+
   useEffect(() => {
     const getComments = async () => {
       const resp = await axios.get(baseURL, config);
@@ -42,7 +44,10 @@ function App() {
               src="https://imgur.com/XTC1a81.png"
               alt="definition of a sandwich"
             />
-            <h2>VOTE button will go here</h2>
+            <Route exact path={`/vote`}></Route>
+            <Link to={`/vote`}>
+              <button>VOTE</button>
+            </Link>
             <div className="comment-section">
               <h4>Join the conversation!</h4>
               <Form comments={comments} setToggleFetch={setToggleFetch} />
@@ -60,20 +65,31 @@ function App() {
             ))}
           </div>
         </Route>
+
         <Route exact path={`/vote`}>
           <h3>Vote Here!</h3>
           {foods.map((food, index) => (
-            <div>
-              Question: {index} - {food.fields.food}
+            <div id={index}>
+              Question: {food.fields.food}
               <Link to={`/vote/${food.id}`}>
                 <button>VOTE</button>
               </Link>
             </div>
           ))}
         </Route>
-        <Route path={`/vote/:id`}>
+
+        <Route path={"/vote/:id"}>
           <Vote foods={foods} setToggleFetch={setToggleFetch} />
         </Route>
+
+        {/* <Route path={`/vote/:id`}></Route>
+        <Link to={`/vote/${foods.id}`}>
+          {foodsArr.map((food, index) => (
+            <div id={index}>
+              <Vote foods={foods} setToggleFetch={setToggleFetch} />
+            </div>
+          ))}
+        </Link> */}
       </div>
       <Footer />
     </div>

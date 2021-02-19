@@ -12,7 +12,9 @@ const Vote = (props) => {
   const history = useHistory();
   const params = useParams();
 
-  const question = props.foods.find((q, i) => params.id === q.id);
+  const question = props.foods.find((q) => params.id === q.id);
+  const foodsArr = props.foods
+  const lastElement = foodsArr[foodsArr.length-1]
 
   useEffect(() => {
     if (params.id) {
@@ -54,7 +56,12 @@ const Vote = (props) => {
       await axios.post(baseURL2, { fields }, config);
     }
     props.setToggleFetch((curr) => !curr);
-    history.push("/results");
+
+    if (params.id === lastElement.id) {
+      history.push("/results")
+    } else {
+      history.push(`/vote`)
+    }
   };
 
   if (!question) {
