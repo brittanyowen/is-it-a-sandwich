@@ -1,5 +1,7 @@
 # Is It A Sandwich? 
 
+https://hardcore-jang-0d5f44.netlify.app/
+
 ## Project Description
 
 Users of Is It A Sandwich? will be able to contrubute to the conversaton of "what is a sandwich?" on the home page and vote on if they think a hotdog is a sandwich on the vote page. Upon completing the yes/no question, users will be directed to the results page where the aggregate voting results will be displayed. All of these pages will be available in the navagation bar at the top of the web page. 
@@ -124,11 +126,11 @@ This schedule will be used to keep track of your progress throughout the week an
 | Create Form component & render on App.js above rendered comments using axios GET call | H | 3hrs| 1hrs | 1hrs |
 | Create Foods and Results component, make axios GET call to foods API & render on App.js | H | 3hrs| 2hrs | 2hrs |
 | Edit the yesVotes/noVotes states using axios PUT and POST | H | 6hrs| 6hrs | 6hrs |
-| Once user clicks either yes or no button, direct page to results page using history.push | H | 2hrs| 0hrs | 0hrs |
+| Once user clicks either yes or no button, direct page to results page using history.push | H | 2hrs| 2hrs | 2hrs |
 | Media queries for tablet and mobile | H | 3hrs| 0hrs | 0hrs |
-| CSS Styling using grid and flexbox | H | 3hrs| 0hrs | 0hrs |
-| Adding multiple food items to Foods and Results components | H | 6hrs| 0hrs | 0hrs |
-| Total | H | 37hrs| 16hrs | 16hrs |
+| CSS Styling using grid and flexbox | H | 3hrs| 2hrs | 2hrs |
+| Adding multiple food items to Foods and Results components | H | 6hrs| 2hrs | 2hrs |
+| Total | H | 37hrs| 24hrs | 24hrs |
 
 ## SWOT Analysis
 
@@ -143,4 +145,4 @@ This schedule will be used to keep track of your progress throughout the week an
 - Learning new react plug in with react-minimal-pie-chart and being able to make a more visually appealing web app 
 - Learn how to make and style a hamburger menu on mobile 
 ### Threats:
-- Last project I struggles with getting stuck on small problems and I ended up wasting a lot of time, there is a threat of that happening again with the addition of two API tables and a new react plug in. 
+- Last project I struggled with getting stuck on small problems and I ended up wasting a lot of time, there is a threat of that happening again with the addition of two API tables and a new react plug in. 
