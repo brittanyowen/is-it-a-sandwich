@@ -54,15 +54,17 @@ function App() {
         </Route>
         <Route path="/results">
           <h3 className="results-header">THE PEOPLE HAVE SPOKEN!</h3>
-          {foods.map((food) => (
-            <Results key={food.id} food={food} />
-          ))}
+          <div className="result-container">
+            {foods.map((food) => (
+              <Results key={food.id} food={food} />
+            ))}
+          </div>
         </Route>
         <Route exact path={`/vote`}>
           <h3>Vote Here!</h3>
           {foods.map((food, index) => (
             <div>
-                Question: {index} - {food.fields.food}
+              Question: {index} - {food.fields.food}
               <Link to={`/vote/${food.id}`}>
                 <button>VOTE</button>
               </Link>
