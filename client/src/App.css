@@ -11,7 +11,7 @@
 }
 
 .content {
-  margin: 30px auto;
+  margin: 50px auto;
 }
 
 .comment-section{
@@ -19,4 +19,8 @@
   flex-direction: column; 
   max-width: 500px; 
   margin: 0 auto; 
+}
+
+.vote-button button {
+  background-color: crimson;
 }

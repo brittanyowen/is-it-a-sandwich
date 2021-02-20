@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom'
 import {PieChart} from 'react-minimal-pie-chart'
 import "./Results.css"
 
@@ -12,11 +11,7 @@ const Results = (props) => {
 
   return (
     <div id={props.food.id}>
-      {/* <h3 className="percentage-header">{percentYes}% of voters consider a {food} a {food === "poptart" ? "ravioli" : "sandwich"}</h3> */}
       <h3 className="percentage-header">{food}</h3>
-      {/* <Link to={`/vote/${props.food.id}`}>
-        <button>VOTE</button>
-      </Link> */}
       <PieChart
         key={`${props.food.id}`}
         data={[

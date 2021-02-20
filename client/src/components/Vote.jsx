@@ -13,12 +13,12 @@ const Vote = (props) => {
   const params = useParams();
 
   const question = props.foods.find((q) => params.id === q.id);
-  const foodsArr = props.foods
-  const lastElement = foodsArr[foodsArr.length-1]
+  console.log(props.foods);
 
   useEffect(() => {
     if (params.id) {
       if (params.id === "undefined") {
+        console.log("line 20");
         history.push("/");
       } else if (question) {
         setFood(question.fields.food);
@@ -57,10 +57,24 @@ const Vote = (props) => {
     }
     props.setToggleFetch((curr) => !curr);
 
-    if (params.id === lastElement.id) {
-      history.push("/results")
-    } else {
-      history.push(`/vote`)
+    if (params.id === props.foods[props.foods.length - 1].id) {
+      history.push("/results");
+    } else if (params.id === "rec1QxVsG4LA9xooF") {
+      history.push("/vote/rec7IYq3xD6pnefVO");
+    } else if (params.id === "rec7IYq3xD6pnefVO") {
+      history.push("/vote/rec9OOCfXOiHghDnX");
+    } else if (params.id === "rec9OOCfXOiHghDnX") {
+      history.push("/vote/recPM0k41EXJW3ReP");
+    } else if (params.id === "recPM0k41EXJW3ReP") {
+      history.push("/vote/recTLF5qu9hGsznSl");
+    } else if (params.id === "recTLF5qu9hGsznSl") {
+      history.push("/vote/recg9THNcp1HBzyTc");
+    } else if (params.id === "recg9THNcp1HBzyTc") {
+      history.push("/vote/rechBGKkwornoCkuO");
+    } else if (params.id === "rechBGKkwornoCkuO") {
+      history.push("/vote/recvAJWABPg8rwdr5");
+    } else if (params.id === "recvAJWABPg8rwdr5") {
+      history.push("/vote/recySS5dwS69ZfFQl");
     }
   };
 

@@ -1,96 +1,22 @@
 import { Link, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { baseURL, baseURL2, config } from "./services";
-import { useHistory } from "react-router-dom";
-import axios from "axios";
-import "./App.css";
-import Comments from "./components/Comments";
+
+import Ballot from "./components/Ballot";
 import Footer from "./components/Footer";
-import Form from "./components/Form";
+import Home from "./components/Home";
 import Nav from "./components/Nav";
-import Results from "./components/Results";
-import Vote from "./components/Vote";
+import "./App.css";
 
 function App() {
-  const [comments, setComments] = useState([]);
-  const [foods, setFoods] = useState([]);
-  const [toggleFetch, setToggleFetch] = useState(false);
-  const history = useHistory();
-
-  const foodsArr = foods;
-
-  useEffect(() => {
-    const getComments = async () => {
-      const resp = await axios.get(baseURL, config);
-      setComments(resp.data.records);
-    };
-
-    const showResults = async () => {
-      const resp2 = await axios.get(baseURL2, config);
-      setFoods(resp2.data.records);
-    };
-    getComments();
-    showResults();
-  }, [toggleFetch]);
 
   return (
     <div className="App">
-      <div>
-        <Nav foods={foods} />
-        <Route exact path="/">
-          <div className="content">
-            <img
-              className="definition"
-              src="https://imgur.com/XTC1a81.png"
-              alt="definition of a sandwich"
-            />
-            <Route exact path={`/vote`}></Route>
-            <Link to={`/vote`}>
-              <button>VOTE</button>
-            </Link>
-            <div className="comment-section">
-              <h4>Join the conversation!</h4>
-              <Form comments={comments} setToggleFetch={setToggleFetch} />
-              {comments.map((comment) => (
-                <Comments key={comment.id} comment={comment} />
-              ))}
-            </div>
-          </div>
-        </Route>
-        <Route path="/results">
-          <h3 className="results-header">THE PEOPLE HAVE SPOKEN!</h3>
-          <div className="result-container">
-            {foods.map((food) => (
-              <Results key={food.id} food={food} />
-            ))}
-          </div>
-        </Route>
-
-        <Route exact path={`/vote`}>
-          <h3>Vote Here!</h3>
-          {foods.map((food, index) => (
-            <div id={index}>
-              Question: {food.fields.food}
-              <Link to={`/vote/${food.id}`}>
-                <button>VOTE</button>
-              </Link>
-            </div>
-          ))}
-        </Route>
-
-        <Route path={"/vote/:id"}>
-          <Vote foods={foods} setToggleFetch={setToggleFetch} />
-        </Route>
-
-        {/* <Route path={`/vote/:id`}></Route>
-        <Link to={`/vote/${foods.id}`}>
-          {foodsArr.map((food, index) => (
-            <div id={index}>
-              <Vote foods={foods} setToggleFetch={setToggleFetch} />
-            </div>
-          ))}
-        </Link> */}
-      </div>
+      <Nav />
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route to="/vote">
+        <Ballot />
+      </Route>
       <Footer />
     </div>
   );
