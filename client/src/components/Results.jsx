@@ -13,7 +13,6 @@ const Results = (props) => {
     <div>
     <div id={props.food.id}>
       <h3 className="percentage-header">{food === "poptart" ? "poptart (is a ravioli)" : food}</h3>
-      {/* <div>* results based on {totalVotes} voters </div> */}
       <PieChart
         key={`${props.food.id}`}
         data={[

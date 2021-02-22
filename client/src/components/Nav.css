@@ -28,7 +28,7 @@ grid-column: 2 / span 1;
 }
 
 .sandwich-link {
-  grid-column: 4 / span 2;
+  grid-column: 3 / span 4;
 }
 
 .vote-link {
@@ -43,9 +43,9 @@ grid-column: 2 / span 1;
 
 @media screen and (max-width: 420px) {
   a {
-    font-size: 14px; 
+    font-size: 17px; 
   }
   .results-header {
-    font-size: 15px; 
+    font-size: 23px; 
   }
 }

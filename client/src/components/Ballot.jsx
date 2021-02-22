@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { baseURL2, config } from "../services";
@@ -26,6 +26,10 @@ const Ballot = () => {
         <h3 className="results-header">
           Voters were asked if they think each item is a sandwich.
         </h3>
+        <p>Have some thoughts? Join the conversation!</p>
+        <Link to="/">
+        <button className="form">Comment</button>
+        </Link>
         <div className="result-container">
           {foods.map((food) => (
             <Results key={food.id} food={food} />

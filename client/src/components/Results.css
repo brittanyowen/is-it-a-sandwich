@@ -10,6 +10,7 @@
   margin-top: 70px; 
   font-weight: bold;
   font-size: 30px; 
+  margin-bottom: 10px;
 }
 
 .percentage-header {
@@ -22,19 +23,7 @@ svg {
 }
 
 @media screen and (max-width: 899px) {
-  .results-header {
-    font-size: 20px; 
-  }
   .percentage-header {
     font-size: 20px; 
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .results-header {
-    font-size: 15px; 
-  }
-  .percentage-header {
-    font-size: 15px; 
   }
 }

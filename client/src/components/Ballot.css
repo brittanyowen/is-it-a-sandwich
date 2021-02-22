@@ -1,6 +1,7 @@
 .ballot-div {
   align-items: stretch; 
   height: 100%; 
+  margin-bottom: 70px; 
 }
 
 .start-button {
@@ -9,4 +10,28 @@
 
 .hidden-button {
   display: none; 
+}
+
+p {
+  color: rgb(18, 19, 15); 
+  font-size: 20px; 
+  margin: 10px; 
+}
+
+.form {
+  background-color: rgb(143, 203, 155);
+  padding: 10px;
+  width: 100px; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.form:hover {
+  background-color: rgb(55, 83, 68); 
 }
