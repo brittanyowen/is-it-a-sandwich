@@ -13,7 +13,7 @@ const Vote = (props) => {
   const params = useParams();
 
   const question = props.foods.find((q) => params.id === q.id);
-
+  
   useEffect(() => {
     if (params.id) {
       if (params.id === "undefined") {
@@ -46,19 +46,24 @@ const Vote = (props) => {
       food,
       yesVotes,
       noVotes,
+      image: question.fields.image,
     };
 
     if (params.id) {
       const questionURL = `${baseURL2}/${params.id}`;
-      await axios.put(questionURL, { fields }, config);
+      await axios.patch(questionURL, { fields }, config);
     } else {
       await axios.post(baseURL2, { fields }, config);
     }
     props.setToggleFetch((curr) => !curr);
 
+    // const curr = props.foods.findIndex((food) => food.id === params.id); 
+
     if (params.id === props.foods[props.foods.length - 1].id) {
       history.push("/results");
-    } else if (params.id === "rec1QxVsG4LA9xooF") {
+    } else
+    // { history.push(`/vote/${props.food[curr + 1].id}`) }
+    if (params.id === "rec1QxVsG4LA9xooF") {
       history.push("/vote/rec7IYq3xD6pnefVO");
     } else if (params.id === "rec7IYq3xD6pnefVO") {
       history.push("/vote/rec9OOCfXOiHghDnX");
