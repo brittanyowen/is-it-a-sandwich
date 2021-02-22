@@ -18,4 +18,5 @@
 .comment h4 {
   font-weight: lighter;
   padding-left: 10px;
+  max-width: 600px; 
 }
