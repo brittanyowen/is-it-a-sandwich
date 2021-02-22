@@ -6,7 +6,7 @@
 }
 
 .ballot-container img {
-  max-width: 300px;
+  height: 400px; 
   margin: 30px auto; 
 }
 

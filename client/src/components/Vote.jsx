@@ -43,7 +43,7 @@ const Vote = (props) => {
     e.preventDefault();
 
     const fields = {
-      food,
+      food: question.fields.food,
       yesVotes,
       noVotes,
       image: question.fields.image,
@@ -57,29 +57,12 @@ const Vote = (props) => {
     }
     props.setToggleFetch((curr) => !curr);
 
-    // const curr = props.foods.findIndex((food) => food.id === params.id); 
+    const curr = props.foods.findIndex((food) => food.id === params.id); 
 
     if (params.id === props.foods[props.foods.length - 1].id) {
       history.push("/results");
     } else
-    // { history.push(`/vote/${props.food[curr + 1].id}`) }
-    if (params.id === "rec1QxVsG4LA9xooF") {
-      history.push("/vote/rec7IYq3xD6pnefVO");
-    } else if (params.id === "rec7IYq3xD6pnefVO") {
-      history.push("/vote/rec9OOCfXOiHghDnX");
-    } else if (params.id === "rec9OOCfXOiHghDnX") {
-      history.push("/vote/recPM0k41EXJW3ReP");
-    } else if (params.id === "recPM0k41EXJW3ReP") {
-      history.push("/vote/recTLF5qu9hGsznSl");
-    } else if (params.id === "recTLF5qu9hGsznSl") {
-      history.push("/vote/recg9THNcp1HBzyTc");
-    } else if (params.id === "recg9THNcp1HBzyTc") {
-      history.push("/vote/rechBGKkwornoCkuO");
-    } else if (params.id === "rechBGKkwornoCkuO") {
-      history.push("/vote/recvAJWABPg8rwdr5");
-    } else if (params.id === "recvAJWABPg8rwdr5") {
-      history.push("/vote/recySS5dwS69ZfFQl");
-    }
+    { history.push(`/vote/${props.foods[curr + 1].id}`) }
   };
 
   if (!question) {
