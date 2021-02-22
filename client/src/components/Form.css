@@ -1,6 +1,4 @@
 .comment-form {
-  /* flex-direction: column;
-  justify-items:center ;  */
   text-align: left;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -8,7 +6,9 @@
   row-gap: 5px;
   border: solid black 1px; 
   padding: 5px; 
-  background-color: lightblue;
+  background-color: rgb(19, 117, 71);
+  font-size: 18.75px; 
+  font-weight: bold;
 }
 
 .author-label {
@@ -22,14 +22,33 @@ grid-row: 2 / span 1;
 
 input {
   grid-column: 2 / span 4; 
+  border: solid black .5px; 
+}
+
+input:focus {
+  outline: none; 
 }
 
 textarea {
   grid-column: 2 / span 4;
   grid-row: 2 / span 3; 
+  border: solid black .5px; 
+  outline: none; 
 }
 
 button { 
   grid-column: 3 / span 1;
   grid-row: 5 / span 1; 
+  background-color: rgb(224, 122, 95);
+  font-weight: bold; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16.75px; 
+  font-weight: normal;
+}
+
+button:hover {
+  background-color: rgb(196, 69, 54); 
+  color: white; 
 }

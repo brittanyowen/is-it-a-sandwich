@@ -1,3 +1,8 @@
+.ballot-div {
+  align-items: stretch; 
+  height: 100%; 
+}
+
 .start-button {
   background-color: yellowgreen; 
 }

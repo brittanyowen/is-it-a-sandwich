@@ -2,17 +2,22 @@
   text-align: left;
   border: solid black 1px; 
   margin-top: 10px;
+  align-items: stretch;
+  background-color: white; 
+
 }
 
 .comment h3 {
   font-weight: normal;
-  background-color: lightblue;
+  background-color: rgb(19, 117, 71);
   border-bottom: solid black 1px; 
   padding: 5px; 
   margin: 0; 
+  font-weight: bold; 
 }
 
 .comment h4 {
   font-weight: lighter;
   padding-left: 10px; 
+
 }

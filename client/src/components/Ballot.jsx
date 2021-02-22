@@ -6,7 +6,7 @@ import { baseURL2, config } from "../services";
 
 import Results from "./Results";
 import Vote from "./Vote";
-import "./Ballot.css"
+import "./Ballot.css";
 
 const Ballot = () => {
   const [foods, setFoods] = useState([]);
@@ -21,16 +21,18 @@ const Ballot = () => {
   }, [toggleFetch]);
 
   return (
-    <div>
+    <div className="ballot-div">
       <Route path="/results">
-        <h3 className="results-header">THE PEOPLE HAVE SPOKEN!</h3>
+        <h3 className="results-header">
+          Voters were asked if they think each item is a sandwich.
+        </h3>
         <div className="result-container">
           {foods.map((food) => (
             <Results key={food.id} food={food} />
           ))}
         </div>
       </Route>
-        
+
       <Route exact path={"/vote/:id"}>
         <Vote foods={foods} setToggleFetch={setToggleFetch} />
       </Route>

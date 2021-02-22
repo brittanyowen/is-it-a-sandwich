@@ -13,7 +13,6 @@ const Vote = (props) => {
   const params = useParams();
 
   const question = props.foods.find((q) => params.id === q.id);
-  console.log(props.foods);
 
   useEffect(() => {
     if (params.id) {

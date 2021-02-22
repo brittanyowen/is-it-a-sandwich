@@ -2,6 +2,7 @@
   display:flex; 
   flex-direction: column;
   text-decoration: none;
+  margin-top: 70px; 
 }
 
 .ballot-container img {
@@ -10,14 +11,13 @@
 }
 
 .question {
-  color: rgb(59, 59, 136);
+  color: rgb(19, 117, 71);
   font-weight: bold;
   font-size: 30px; 
 }
 
 .ballot-container button {
-  background-color: lightblue;
-  color: white; 
+  background-color: rgb(224, 122, 95);
   padding: 10px 15px;
   width: 100px; 
   text-align: center;
@@ -32,8 +32,6 @@
 }
 
 .ballot-container button:hover {
-  background-color: white; 
-  color: rgb(59, 59, 136);
-  
-
+  background-color: rgb(196, 69, 54); 
+  color: white; 
 }

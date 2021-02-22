@@ -1,7 +1,12 @@
 .App {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   text-align: center;
+}
+
+h1 {
+  font-size: 50px; 
+  color: rgb(196, 69, 54);
 }
 
 .definition {
@@ -11,16 +16,55 @@
 }
 
 .content {
+  display: grid; 
+  grid-template-areas: 
+  " info comments ";
+  column-gap: 70px; 
   margin: 50px auto;
+  height: 100%; 
+  padding: 15px; 
 }
 
+.comment-container{
+  grid-area: comments;
+}
+.info {
+  grid-area: info;
+}
 .comment-section{
   display: flex;
   flex-direction: column; 
-  max-width: 500px; 
+  max-width: 700px; 
   margin: 0 auto; 
 }
 
 .vote-button button {
-  background-color: crimson;
+  background-color: rgb(224, 122, 95);
+  padding: 10px 15px;
+  width: 100px; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.vote-button button:hover {
+  background-color: rgb(196, 69, 54); 
+}
+
+.blurb {
+  width: 500px; 
+  font-size: 25px; 
+}
+
+.join {
+  font-size: 50px; 
+  margin-bottom: 5px; 
+  margin-top: 10px; 
+  color: rgb(196, 69, 54);
+
 }

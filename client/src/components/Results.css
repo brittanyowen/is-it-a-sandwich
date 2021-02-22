@@ -1,18 +1,22 @@
 .result-container {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr 1fr 1fr;  */
-
   display:flex;
   flex-flow: row wrap; 
   justify-content: center; 
+  margin-bottom: 50px; 
 }
 
 .results-header {
-  color: red; 
+  color: rgb(4, 57, 31); 
   margin-top: 50px; 
+  font-weight: bold;
+  font-size: 30px; 
 }
 
 .percentage-header {
-  color: rgb(59, 59, 136);
+  color: rgb(4, 57, 31);
+  font-size: 30px; 
+}
+
+svg {
+  height: 80%; 
 }

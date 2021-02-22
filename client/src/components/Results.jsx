@@ -10,23 +10,26 @@ const Results = (props) => {
   const percentYes = Math.round((yes / totalVotes) * 100); 
 
   return (
+    <div>
     <div id={props.food.id}>
-      <h3 className="percentage-header">{food}</h3>
+      <h3 className="percentage-header">{food === "poptart" ? "poptart (is a ravioli)" : food}</h3>
+      {/* <div>* results based on {totalVotes} voters </div> */}
       <PieChart
         key={`${props.food.id}`}
         data={[
-          { title: 'YES', value: yes, color: '#E38627' },
-          { title: 'NO', value: no, color: '#C13C37' }
+          { title: 'YES', value: yes, color: '#137547' },
+          { title: 'NO', value: no, color: '#5a7c70' }
         ]}
         label={({ dataEntry }) => `${Math.round(dataEntry.percentage)}% ${dataEntry.title} `}
         labelStyle={() => ({
-          fontSize: '4px',
+          fontSize: '8px',
         })}
-        radius={30}
-        center={[50, 30]}
+        radius={40}
+        center={[50, 40]}
         viewBoxSize={[100, 90]}
-      />
+        />
     </div>
+        </div>
   );
 };
 export default Results;

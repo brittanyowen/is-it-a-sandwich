@@ -1,4 +1,4 @@
-import { Link, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import Ballot from "./components/Ballot";
 import Footer from "./components/Footer";

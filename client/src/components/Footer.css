@@ -3,7 +3,8 @@
   grid-template-columns: repeat(3, 1fr); 
   position: fixed;
   bottom: 0; 
-  background-color: lightblue;
+  background-color: rgb(4, 57, 31);
+  color: rgb(235, 235, 235); 
   text-align: center; 
   align-items: center; 
   width: 100%; 
