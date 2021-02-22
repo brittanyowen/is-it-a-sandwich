@@ -26,10 +26,8 @@ p {
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
-  font-weight: bold; 
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 8px;
 }
 
 .form:hover {
