@@ -1,6 +1,6 @@
 # Is It A Sandwich? 
 
-https://hardcore-jang-0d5f44.netlify.app/
+https://is-it-a-sandwich.netlify.app/
 
 ## Project Description
 
@@ -110,9 +110,9 @@ This schedule will be used to keep track of your progress throughout the week an
 |Feb 16| Project Pitch & Approval, React app & basic framework & Nav component set up | Complete
 |Feb 17| Render comments API on home page & fully functioning comment form with submit button | Complete
 |Feb 18| Render foods API on results page, voting page to modify yes/no of food | Complete
-|Feb 19| Deployed MVP due, media queries | Complete/Incomplete
+|Feb 19| Deployed MVP due, media queries | Complete
 |Feb 20| Post MVPs, adding other foods to API/voting page/results page | Complete
-|Feb 21-22 | CSS Styling - grid/flexbox/animations | Incomplete
+|Feb 21-22 | CSS Styling - grid/flexbox/animations | Complete
 |Feb 23| Presentations | Incomplete
 
 ## Timeframes
@@ -127,10 +127,10 @@ This schedule will be used to keep track of your progress throughout the week an
 | Create Foods and Results component, make axios GET call to foods API & render on App.js | H | 3hrs| 2hrs | 2hrs |
 | Edit the yesVotes/noVotes states using axios PUT and POST | H | 6hrs| 6hrs | 6hrs |
 | Once user clicks either yes or no button, direct page to results page using history.push | H | 2hrs| 6hrs | 6hrs |
-| Media queries for tablet and mobile | H | 3hrs| 0hrs | 0hrs |
-| CSS Styling using grid and flexbox | H | 3hrs| 2hrs | 2hrs |
-| Adding multiple food items to Foods and Results components | H | 6hrs| 4hrs | 4hrs |
-| Total | H | 37hrs| 30hrs | 30hrs |
+| Media queries for tablet and mobile | H | 3hrs| 3hrs | 3hrs |
+| CSS Styling using grid and flexbox | H | 3hrs| 5hrs | 5hrs |
+| Adding multiple food items to Foods and Results components | H | 6hrs| 5hrs | 5hrs |
+| Total | H | 37hrs| 35hrs | 35hrs |
 
 ## SWOT Analysis
 
@@ -146,3 +146,8 @@ This schedule will be used to keep track of your progress throughout the week an
 - Learn how to make and style a hamburger menu on mobile 
 ### Threats:
 - Last project I struggled with getting stuck on small problems and I ended up wasting a lot of time, there is a threat of that happening again with the addition of two API tables and a new react plug in. 
+
+## Changelog
+- added description of website purpose on home page
+- omitted hamburger menu
+- added Ballot and Vote components 
