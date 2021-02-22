@@ -20,3 +20,21 @@
 svg {
   height: 80%; 
 }
+
+@media screen and (max-width: 899px) {
+  .results-header {
+    font-size: 20px; 
+  }
+  .percentage-header {
+    font-size: 20px; 
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .results-header {
+    font-size: 15px; 
+  }
+  .percentage-header {
+    font-size: 15px; 
+  }
+}

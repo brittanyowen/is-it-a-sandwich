@@ -1,6 +1,5 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
-import Vote from "./Vote";
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 const Nav = () => {

@@ -34,3 +34,18 @@ grid-column: 2 / span 1;
 .vote-link {
   grid-column: 7 / span 1;
 }
+
+@media screen and (max-width: 850px) {
+  a {
+    font-size: 20px; 
+  }
+}
+
+@media screen and (max-width: 420px) {
+  a {
+    font-size: 14px; 
+  }
+  .results-header {
+    font-size: 15px; 
+  }
+}

@@ -16,21 +16,12 @@ h1 {
 }
 
 .content {
-  /* display: grid; 
-  grid-template-areas: 
-  " info comments "; */
   column-gap: 70px; 
   margin: 50px auto;
   height: 100%; 
   padding: 15px; 
 }
 
-/* .comment-container{
-  grid-area: comments;
-}
-.info {
-  grid-area: info;
-} */
 .comment-section{
   display: flex;
   flex-direction: column; 
@@ -57,7 +48,7 @@ h1 {
 }
 
 .blurb {
-  width: 600px; 
+  max-width: 600px; 
   font-size: 25px; 
   color: rgb(18, 19, 15);
 }
@@ -68,4 +59,22 @@ h1 {
   margin-top: 10px; 
   color: rgb(91, 146, 121);
 
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .blurb {
+    font-size: 15px; 
+  }
+
+  .join {
+    font-size: 30px; 
+  }
+
+  .definition {
+    width: 300px; 
+  }
 }
