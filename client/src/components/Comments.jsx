@@ -1,8 +1,7 @@
 import React from "react";
-import "./Comments.css"
+import "./Comments.css";
 
 const Comments = (props) => {
-
   const { author, comment } = props.comment.fields;
 
   return (

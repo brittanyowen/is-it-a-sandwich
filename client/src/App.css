@@ -5,60 +5,60 @@
 }
 
 h1 {
-  font-size: 50px; 
+  font-size: 50px;
   color: rgb(91, 146, 121);
 }
 
 .definition {
   max-width: 600px;
   border: solid black 2px;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .content {
-  column-gap: 70px; 
+  column-gap: 70px;
   margin: 50px auto;
-  height: 100%; 
-  padding: 15px; 
+  height: 100%;
+  padding: 15px;
 }
 
-.comment-section{
+.comment-section {
   display: flex;
-  flex-direction: column; 
-  max-width: 700px; 
-  min-width: 250px; 
-  margin: 0 auto; 
+  flex-direction: column;
+  max-width: 700px;
+  min-width: 250px;
+  margin: 0 auto;
 }
 
 .vote-button button {
   background-image: url("https://imgur.com/0Pduuur.png");
-  background-size:cover; 
+  background-size: cover;
   width: 110px;
-  height: 110px; 
+  height: 110px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  font-weight: bold; 
+  font-weight: bold;
   cursor: pointer;
-  background-color: white; 
-  border-width: 0px;  
+  background-color: white;
+  border-width: 0px;
 }
 
 .vote-button button:hover {
-  background-color: rgb(55, 83, 68); 
+  background-color: rgb(55, 83, 68);
 }
 
 .blurb {
-  max-width: 600px; 
-  font-size: 25px; 
+  max-width: 600px;
+  font-size: 25px;
   color: rgb(18, 19, 15);
 }
 
 .join {
-  font-size: 50px; 
-  margin-bottom: 5px; 
-  margin-top: 10px; 
+  font-size: 50px;
+  margin-bottom: 5px;
+  margin-top: 10px;
   font-weight: bold;
   color: rgb(91, 146, 121);
 }
@@ -69,23 +69,23 @@ h1 {
   }
 
   p .blurb {
-    font-size: 10px; 
+    font-size: 10px;
   }
 
   .blurb {
-    font-size: 15px; 
+    font-size: 15px;
   }
 
   .join {
-    font-size: 30px; 
+    font-size: 30px;
   }
 
   .definition {
-    max-width: 350px; 
+    max-width: 350px;
   }
 
-.vote-button button {
-  width: 70px;
-  height: 70px; 
-}
+  .vote-button button {
+    width: 70px;
+    height: 70px;
+  }
 }

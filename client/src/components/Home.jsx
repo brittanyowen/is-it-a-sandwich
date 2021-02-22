@@ -31,8 +31,8 @@ const Home = () => {
           But what constitutes a sandwich? Is it the container? Does it have to
           include two slices of square bread? Perhaps it has to do with what is
           inside the bread. Maybe a sandwich is determined by the way it is
-          eaten or by it's portability. <strong>Click the sandwich </strong>below to cast your votes for "Is It A Sandwich?"!
-          
+          eaten or by it's portability. <strong>Click the sandwich </strong>
+          below to cast your votes for "Is It A Sandwich?"!
         </p>
         <br></br>
         <div className="vote-button">

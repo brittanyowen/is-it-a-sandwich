@@ -4,10 +4,10 @@
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   row-gap: 5px;
-  border: solid black 1px; 
-  padding: 5px; 
+  border: solid black 1px;
+  padding: 5px;
   background-color: rgb(91, 146, 121);
-  font-size: 18.75px; 
+  font-size: 18.75px;
   font-weight: bold;
 }
 
@@ -16,39 +16,39 @@
 }
 
 .comment-label {
-grid-column: 1 / span 1; 
-grid-row: 2 / span 1; 
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
 }
 
 input {
-  grid-column: 2 / span 4; 
-  border: solid black .5px; 
+  grid-column: 2 / span 4;
+  border: solid black 0.5px;
 }
 
 input:focus {
-  outline: none; 
+  outline: none;
 }
 
 textarea {
   grid-column: 2 / span 4;
-  grid-row: 2 / span 3; 
-  border: solid black .5px; 
-  outline: none; 
+  grid-row: 2 / span 3;
+  border: solid black 0.5px;
+  outline: none;
 }
 
-button { 
+button {
   grid-column: 3 / span 1;
-  grid-row: 5 / span 1; 
+  grid-row: 5 / span 1;
   background-color: rgb(143, 203, 155);
-  font-weight: bold; 
+  font-weight: bold;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 8px;
-  font-size: 16.75px; 
+  font-size: 16.75px;
   font-weight: normal;
 }
 
 button:hover {
-  background-color: rgb(55, 83, 68); 
-  color: white; 
+  background-color: rgb(55, 83, 68);
+  color: white;
 }

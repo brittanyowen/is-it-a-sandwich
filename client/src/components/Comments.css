@@ -1,23 +1,21 @@
 .comment {
   text-align: left;
-  border: solid black 1px; 
+  border: solid black 1px;
   margin-top: 10px;
   align-items: stretch;
-  background-color: white; 
-
+  background-color: white;
 }
 
 .comment h3 {
   font-weight: normal;
   background-color: rgb(91, 146, 121);
-  border-bottom: solid black 1px; 
-  padding: 5px; 
-  margin: 0; 
-  font-weight: bold; 
+  border-bottom: solid black 1px;
+  padding: 5px;
+  margin: 0;
+  font-weight: bold;
 }
 
 .comment h4 {
   font-weight: lighter;
-  padding-left: 10px; 
-
+  padding-left: 10px;
 }

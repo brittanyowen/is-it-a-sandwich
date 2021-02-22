@@ -1,31 +1,31 @@
 .ballot-container {
-  display:flex; 
+  display: flex;
   flex-direction: column;
   text-decoration: none;
-  margin-top: 70px; 
+  margin-top: 70px;
 }
 
 .ballot-container img {
-  height: 400px; 
-  margin: 30px auto; 
-  border-radius: 25px; 
+  height: 400px;
+  margin: 30px auto;
+  border-radius: 25px;
 }
 
 .question {
   color: rgb(91, 146, 121);
   font-weight: bold;
-  font-size: 30px; 
+  font-size: 30px;
 }
 
 .ballot-container button {
   background-color: rgb(143, 203, 155);
   padding: 10px 15px;
-  width: 100px; 
+  width: 100px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  font-weight: bold; 
+  font-weight: bold;
   margin: 20px 5px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -33,8 +33,8 @@
 }
 
 .ballot-container button:hover {
-  background-color: rgb(55, 83, 68); 
-  color: white; 
+  background-color: rgb(55, 83, 68);
+  color: white;
 }
 
 @media screen and (max-width: 420px) {

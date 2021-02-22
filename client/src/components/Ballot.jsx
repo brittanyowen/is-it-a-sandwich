@@ -28,7 +28,7 @@ const Ballot = () => {
         </h3>
         <p>Have some thoughts? Join the conversation!</p>
         <Link to="/">
-        <button className="form">COMMENT</button>
+          <button className="form">COMMENT</button>
         </Link>
         <div className="result-container">
           {foods.map((food) => (

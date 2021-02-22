@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { baseURL, config } from "../services";
-import './Form.css'
+import "./Form.css";
 
 const Form = (props) => {
   const [author, setAuthor] = useState("");
@@ -25,10 +25,14 @@ const Form = (props) => {
 
   return (
     <form className="comment-form" onSubmit={handleSubmit}>
-      <label className="author-label" htmlFor="author">Author: </label>
+      <label className="author-label" htmlFor="author">
+        Author:{" "}
+      </label>
       <input value={author} onChange={(e) => setAuthor(e.target.value)}></input>
       <br></br>
-      <label className="comment-label" htmlFor="comment">Comment: </label>
+      <label className="comment-label" htmlFor="comment">
+        Comment:{" "}
+      </label>
       <textarea
         value={comment}
         onChange={(e) => setComment(e.target.value)}

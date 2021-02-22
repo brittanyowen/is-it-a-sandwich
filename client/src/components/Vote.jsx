@@ -13,7 +13,7 @@ const Vote = (props) => {
   const params = useParams();
 
   const question = props.foods.find((q) => params.id === q.id);
-  
+
   useEffect(() => {
     if (params.id) {
       if (params.id === "undefined") {
@@ -57,12 +57,13 @@ const Vote = (props) => {
     }
     props.setToggleFetch((curr) => !curr);
 
-    const curr = props.foods.findIndex((food) => food.id === params.id); 
+    const curr = props.foods.findIndex((food) => food.id === params.id);
 
     if (params.id === props.foods[props.foods.length - 1].id) {
       history.push("/results");
-    } else
-    { history.push(`/vote/${props.foods[curr + 1].id}`) }
+    } else {
+      history.push(`/vote/${props.foods[curr + 1].id}`);
+    }
   };
 
   if (!question) {

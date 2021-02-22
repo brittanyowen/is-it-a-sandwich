@@ -1,27 +1,27 @@
 .ballot-div {
-  align-items: stretch; 
-  height: 100%; 
-  margin-bottom: 70px; 
+  align-items: stretch;
+  height: 100%;
+  margin-bottom: 70px;
 }
 
 .start-button {
-  background-color: yellowgreen; 
+  background-color: yellowgreen;
 }
 
 .hidden-button {
-  display: none; 
+  display: none;
 }
 
 p {
-  color: rgb(18, 19, 15); 
-  font-size: 20px; 
-  margin: 10px; 
+  color: rgb(18, 19, 15);
+  font-size: 20px;
+  margin: 10px;
 }
 
 .form {
   background-color: rgb(143, 203, 155);
   padding: 10px;
-  width: 100px; 
+  width: 100px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -31,5 +31,5 @@ p {
 }
 
 .form:hover {
-  background-color: rgb(55, 83, 68); 
+  background-color: rgb(55, 83, 68);
 }

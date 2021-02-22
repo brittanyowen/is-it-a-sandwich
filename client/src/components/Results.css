@@ -1,29 +1,29 @@
 .result-container {
-  display:flex;
-  flex-flow: row wrap; 
-  justify-content: center; 
-  margin-bottom: 50px; 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .results-header {
-  color: rgb(18, 19, 15); 
-  margin-top: 70px; 
+  color: rgb(18, 19, 15);
+  margin-top: 70px;
   font-weight: bold;
-  font-size: 30px; 
+  font-size: 30px;
   margin-bottom: 10px;
 }
 
 .percentage-header {
   color: rgb(18, 19, 15);
-  font-size: 30px; 
+  font-size: 30px;
 }
 
 svg {
-  height: 80%; 
+  height: 80%;
 }
 
 @media screen and (max-width: 899px) {
   .percentage-header {
-    font-size: 20px; 
+    font-size: 20px;
   }
 }
