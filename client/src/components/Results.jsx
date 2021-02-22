@@ -17,8 +17,8 @@ const Results = (props) => {
       <PieChart
         key={`${props.food.id}`}
         data={[
-          { title: 'YES', value: yes, color: '#137547' },
-          { title: 'NO', value: no, color: '#5a7c70' }
+          { title: 'YES', value: yes, color: '#8fcb9b' },
+          { title: 'NO', value: no, color: '#5b9279' }
         ]}
         label={({ dataEntry }) => `${Math.round(dataEntry.percentage)}% ${dataEntry.title} `}
         labelStyle={() => ({

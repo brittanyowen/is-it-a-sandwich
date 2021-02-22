@@ -6,7 +6,7 @@
   row-gap: 5px;
   border: solid black 1px; 
   padding: 5px; 
-  background-color: rgb(19, 117, 71);
+  background-color: rgb(91, 146, 121);
   font-size: 18.75px; 
   font-weight: bold;
 }
@@ -39,7 +39,7 @@ textarea {
 button { 
   grid-column: 3 / span 1;
   grid-row: 5 / span 1; 
-  background-color: rgb(224, 122, 95);
+  background-color: rgb(143, 203, 155);
   font-weight: bold; 
   transition-duration: 0.4s;
   cursor: pointer;
@@ -49,6 +49,6 @@ button {
 }
 
 button:hover {
-  background-color: rgb(196, 69, 54); 
+  background-color: rgb(55, 83, 68); 
   color: white; 
 }

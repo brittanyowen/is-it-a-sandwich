@@ -6,31 +6,31 @@
 
 h1 {
   font-size: 50px; 
-  color: rgb(196, 69, 54);
+  color: rgb(91, 146, 121);
 }
 
 .definition {
-  max-width: 500px;
+  max-width: 600px;
   border: solid black 2px;
   border-radius: 10px; 
 }
 
 .content {
-  display: grid; 
+  /* display: grid; 
   grid-template-areas: 
-  " info comments ";
+  " info comments "; */
   column-gap: 70px; 
   margin: 50px auto;
   height: 100%; 
   padding: 15px; 
 }
 
-.comment-container{
+/* .comment-container{
   grid-area: comments;
 }
 .info {
   grid-area: info;
-}
+} */
 .comment-section{
   display: flex;
   flex-direction: column; 
@@ -39,7 +39,7 @@ h1 {
 }
 
 .vote-button button {
-  background-color: rgb(224, 122, 95);
+  background-color: rgb(143, 203, 155);
   padding: 10px 15px;
   width: 100px; 
   text-align: center;
@@ -53,18 +53,19 @@ h1 {
 }
 
 .vote-button button:hover {
-  background-color: rgb(196, 69, 54); 
+  background-color: rgb(55, 83, 68); 
 }
 
 .blurb {
-  width: 500px; 
+  width: 600px; 
   font-size: 25px; 
+  color: rgb(18, 19, 15);
 }
 
 .join {
   font-size: 50px; 
   margin-bottom: 5px; 
   margin-top: 10px; 
-  color: rgb(196, 69, 54);
+  color: rgb(91, 146, 121);
 
 }
