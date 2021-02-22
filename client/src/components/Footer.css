@@ -17,6 +17,14 @@
 
 .footer img {
   width: 20px; 
+  padding: 0 5px;
+}
+
+.icon {
+  font-size: 10px;
+}
+.icon a{
+  font-size: 10px; 
 }
 
 @media screen and (max-width: 420px) {
