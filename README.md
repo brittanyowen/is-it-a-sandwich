@@ -113,7 +113,7 @@ This schedule will be used to keep track of your progress throughout the week an
 |Feb 19| Deployed MVP due, media queries | Complete
 |Feb 20| Post MVPs, adding other foods to API/voting page/results page | Complete
 |Feb 21-22 | CSS Styling - grid/flexbox/animations | Complete
-|Feb 23| Presentations | /
+|Feb 23| Presentations | 
 
 ## Timeframes
 
